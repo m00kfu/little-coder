@@ -2,6 +2,13 @@
 
 All notable changes to little-coder are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and little-coder's public interface (CLI, providers, tools, skills) follows semver starting at `v0.0.1` post-rename.
 
+## [v1.12.0] — 2026-07-24
+
+### Dependencies
+- **Bumped bundled pi `@earendil-works/pi-coding-agent` 0.79.4 → 0.82.x.** Includes upstream fixes for compaction retries, DNS lookup failures, and llama.cpp output token limit (no longer capped at 16K). The "Operation aborted" marker patch (`scripts/patch-pi.mjs`) was updated to match pi's simplified abort-message rendering in 0.82 — the surrounding code structure changed (the `hasVisibleContent` conditional was removed, replaced by a direct `if (message.stopReason === "aborted")` block), so the find/replace strings were refreshed to keep the bare red marker suppressed.
+
+---
+
 ## [v1.11.0] — 2026-07-18
 
 ### Fixed
