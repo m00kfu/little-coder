@@ -34,8 +34,7 @@
     "pi": "pi",
     "test": "vitest run",
     "test:py": "python3 -m pytest benchmarks/test_rpc_client.py -q",
-    "typecheck": "tsc --noEmit",
-    "postinstall": "node scripts/patch-pi.mjs"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@earendil-works/pi-coding-agent": "^0.82.x",
